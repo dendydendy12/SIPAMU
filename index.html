@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,330 +45,401 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .hero-pattern {
-            background-image: 
+            background-image:
                 radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
         }
     </style>
 </head>
+
 <body class="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 min-h-screen text-white overflow-x-hidden">
-   
+
     <!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10  rounded-lg flex items-center justify-center">
-                    <img src="asset/img/logo.png" class="w- h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                </img>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10  rounded-lg flex items-center justify-center">
+                        <img src="asset/img/logo.png" class="w- h-10 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                        </img>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">SIPAMU</span>
                 </div>
-                <span class="text-2xl font-bold gradient-text">SIPAMU</span>
-            </div>
 
-            <!-- Menu Desktop -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#beranda" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Beranda</a>
-                <a href="#layanan" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Layanan</a>
-                <a href="#tentang" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Tentang</a>
-                  <a href="#galeri" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Galeri</a>
-                <a href="#kontak" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Kontak</a>
-            </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda"
+                        class="text-gray-700 hover:text-green-500 transition-colors duration-300">Beranda</a>
+                    <a href="#layanan"
+                        class="text-gray-700 hover:text-green-500 transition-colors duration-300">Layanan</a>
+                    <a href="#tentang"
+                        class="text-gray-700 hover:text-green-500 transition-colors duration-300">Tentang</a>
+                    <a href="#galeri"
+                        class="text-gray-700 hover:text-green-500 transition-colors duration-300">Galeri</a>
+                    <a href="#kontak"
+                        class="text-gray-700 hover:text-green-500 transition-colors duration-300">Kontak</a>
+                </div>
 
-            <!-- Hamburger Menu (Mobile) -->
-            <button class="md:hidden text-gray-700">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="beranda" class="pt-20 pb-16 hero-pattern bg-white">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col lg:flex-row items-center min-h-screen">
-        
-        <!-- Text -->
-        <div class="lg:w-1/2 mb-12 lg:mb-0">
-          <h1 class="text-5xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            <span class="gradient-text">SIPAMU</span>
-          </h1>
-          <h2 class="text-2xl lg:text-3xl mb-8 text-gray-700 animate-slide-up">
-            Sistem Informasi Pemakaman Umum
-          </h2>
-          <p class="text-lg lg:text-xl mb-10 text-gray-600 leading-relaxed animate-slide-up">
-            Solusi digital terdepan untuk pengelolaan pemakaman yang efisien, transparan, dan mudah diakses. Melayani masyarakat dengan sistem yang terintegrasi dan user-friendly.
-          </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-up">
-            <button class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-4 rounded-xl text-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 animate-glow">
-              Mulai Sekarang
-            </button>
-            <button class="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-              Pelajari Lebih Lanjut
-            </button>
-          </div>
-        </div>
-  
-        <!-- Hero Image -->
-        <div class="lg:w-1/2 flex justify-center">
-          <div class="relative">
-            <div class="w-80 h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-3xl animate-float opacity-90 shadow-2xl"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <img src="asset/img/makam2.jpeg" 
-                   alt="Makam" 
-                   class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-xl animate-pulse">
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-  
-   
-
-   <!-- Features Section -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">Fitur Unggulan</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                SIPAMU hadir dengan berbagai fitur canggih untuk memudahkan pengelolaan dan akses informasi pemakaman
-            </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                <!-- Hamburger Menu (Mobile) -->
+                <button class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">Pendaftaran Online</h3>
-                <p class="text-gray-600">Sistem pendaftaran makam baru yang mudah dan cepat melalui platform digital</p>
-            </div>
-
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">Lokasi Makam</h3>
-                <p class="text-gray-600">Pencarian dan pemetaan lokasi makam dengan sistem koordinat yang akurat</p>
-            </div>
-
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">Pembayaran Digital</h3>
-                <p class="text-gray-600">Sistem pembayaran terintegrasi untuk biaya pemakaman dan perawatan</p>
-            </div>
-
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">Manajemen Data</h3>
-                <p class="text-gray-600">Pengelolaan data makam, jenazah, dan keluarga secara terorganisir</p>
-            </div>
-
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">Informasi Real-time</h3>
-                <p class="text-gray-600">Update status dan informasi terkini mengenai ketersediaan lahan pemakaman</p>
-            </div>
-
-            <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-green-600">24/7 Support</h3>
-                <p class="text-gray-600">Layanan bantuan dan konsultasi tersedia kapan saja untuk kemudahan masyarakat</p>
+                </button>
             </div>
         </div>
+    </nav>
 
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-20 pb-16 hero-pattern bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center min-h-screen">
 
-   <!-- About Section -->
-   <section id="tentang" class="py-20 bg-gradient-to-r from-gray-900 to-emerald-900">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl lg:text-5xl font-bold mb-8 gradient-text">Tentang SIPAMU</h2>
-                <div class="space-y-6 text-lg text-gray-300">
-                    <p>
-                        SIPAMU (Sistem Informasi Pemakaman) adalah solusi digital inovatif yang dirancang khusus untuk modernisasi pengelolaan pemakaman. Sistem ini mengintegrasikan teknologi terdepan dengan kebutuhan masyarakat akan layanan pemakaman yang efisien dan transparan.
+                <!-- Text -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 animate-fade-in">
+                        <span class="gradient-text">SIPAMU</span>
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl mb-8 text-gray-700 animate-slide-up">
+                        Sistem Informasi Pemakaman Umum
+                    </h2>
+                    <p class="text-lg lg:text-xl mb-10 text-gray-600 leading-relaxed animate-slide-up">
+                        Solusi digital terdepan untuk pengelolaan pemakaman yang efisien, transparan, dan mudah diakses.
+                        Melayani masyarakat dengan sistem yang terintegrasi dan user-friendly.
                     </p>
-                    <p>
-                        Dengan interface yang user-friendly dan fitur-fitur canggih, SIPAMU memungkinkan masyarakat untuk mengakses informasi pemakaman, melakukan pendaftaran, dan mengelola data dengan mudah dan aman.
-                    </p>
-                    <p>
-                        Platform ini dikembangkan dengan standar keamanan tinggi dan mengutamakan kemudahan akses bagi seluruh lapisan masyarakat.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-8 mt-12">
-                    <div class="text-center">
-                        <div class="text-4xl font-bold gradient-text mb-2">2500+</div>
-                        <div class="text-gray-400">Data Makam</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-bold gradient-text mb-2">99.9%</div>
-                        <div class="text-gray-400">Uptime</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
-                        <div class="text-gray-400">Support</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-bold gradient-text mb-2">100%</div>
-                        <div class="text-gray-400">Digital</div>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-up">
+                        <button
+                            class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-4 rounded-xl text-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 animate-glow">
+                            Mulai Sekarang
+                        </button>
+                        <button
+                            class="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                            Pelajari Lebih Lanjut
+                        </button>
                     </div>
                 </div>
-            </div>
-            
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
-                <div class="relative glass-effect p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold mb-6 text-green-400">Visi & Misi</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-xl font-semibold mb-3 text-green-300">Visi</h4>
-                            <p class="text-gray-300">Menjadi sistem informasi pemakaman terdepan yang memberikan pelayanan prima dengan teknologi modern</p>
+
+                <!-- Hero Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="w-80 h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-3xl animate-float opacity-90 shadow-2xl">
                         </div>
-                        <div>
-                            <h4 class="text-xl font-semibold mb-3 text-green-300">Misi</h4>
-                            <ul class="text-gray-300 space-y-2">
-                                <li>• Memberikan layanan digital yang mudah dan efisien</li>
-                                <li>• Meningkatkan transparansi dalam pengelolaan pemakaman</li>
-                                <li>• Mengoptimalkan penggunaan teknologi untuk masyarakat</li>
-                            </ul>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <img src="asset/img/makam2.jpeg" alt="Makam"
+                                class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-xl animate-pulse">
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- Services Section -->
 
-<section id="layanan" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
-          Fasilitas & Layanan Pemakaman Umum 
-        </h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto font-medium">
-          Dinas Perumahan & Permukiman <br>
-          Pemakaman Umum
-        </p>
-      </div>
-  
-      <!-- Grid Card -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Card 1 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-          <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-            <!-- Icon Kuburan -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 21h12M12 3v18"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-green-600 mb-2">Pemakaman Baru / Tumpang</h3>
-          <p class="text-gray-600 mb-4">Layanan permohonan untuk pemakaman baru atau pemakaman tumpang sesuai prosedur yang berlaku.</p>
-          <button class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">Fitur Unggulan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    SIPAMU hadir dengan berbagai fitur canggih untuk memudahkan pengelolaan dan akses informasi
+                    pemakaman
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Pendaftaran Online</h3>
+                    <p class="text-gray-600">Sistem pendaftaran makam baru yang mudah dan cepat melalui platform digital
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Lokasi Makam</h3>
+                    <p class="text-gray-600">Pencarian dan pemetaan lokasi makam dengan sistem koordinat yang akurat</p>
+                </div>
+
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Pembayaran Digital</h3>
+                    <p class="text-gray-600">Sistem pembayaran terintegrasi untuk biaya pemakaman dan perawatan</p>
+                </div>
+
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Manajemen Data</h3>
+                    <p class="text-gray-600">Pengelolaan data makam, jenazah, dan keluarga secara terorganisir</p>
+                </div>
+
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Informasi Real-time</h3>
+                    <p class="text-gray-600">Update status dan informasi terkini mengenai ketersediaan lahan pemakaman
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 shadow-md p-8 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">24/7 Support</h3>
+                    <p class="text-gray-600">Layanan bantuan dan konsultasi tersedia kapan saja untuk kemudahan
+                        masyarakat</p>
+                </div>
+            </div>
+
         </div>
-  
-        <!-- Card 2 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-          <div class="w-14 h-14 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center mb-4">
-            <!-- Icon Refresh -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v6h6M20 20v-6h-6M4 14a8 8 0 0015.5 2M20 10a8 8 0 00-15.5-2"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-green-600 mb-2">Daftar Ulang Tanah Makam</h3>
-          <p class="text-gray-600 mb-4">Layanan untuk memperpanjang atau melakukan daftar ulang tanah makam yang sudah ada.</p>
-          <button class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-gradient-to-r from-gray-900 to-emerald-900">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-8 gradient-text">Tentang SIPAMU</h2>
+                    <div class="space-y-6 text-lg text-gray-300">
+                        <p>
+                            SIPAMU (Sistem Informasi Pemakaman) adalah solusi digital inovatif yang dirancang khusus
+                            untuk modernisasi pengelolaan pemakaman. Sistem ini mengintegrasikan teknologi terdepan
+                            dengan kebutuhan masyarakat akan layanan pemakaman yang efisien dan transparan.
+                        </p>
+                        <p>
+                            Dengan interface yang user-friendly dan fitur-fitur canggih, SIPAMU memungkinkan masyarakat
+                            untuk mengakses informasi pemakaman, melakukan pendaftaran, dan mengelola data dengan mudah
+                            dan aman.
+                        </p>
+                        <p>
+                            Platform ini dikembangkan dengan standar keamanan tinggi dan mengutamakan kemudahan akses
+                            bagi seluruh lapisan masyarakat.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text mb-2">2500+</div>
+                            <div class="text-gray-400">Data Makam</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text mb-2">99.9%</div>
+                            <div class="text-gray-400">Uptime</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                            <div class="text-gray-400">Support</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text mb-2">100%</div>
+                            <div class="text-gray-400">Digital</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl blur-3xl opacity-30 animate-pulse">
+                    </div>
+                    <div class="relative glass-effect p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">Visi & Misi</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-3 text-green-300">Visi</h4>
+                                <p class="text-gray-300">Menjadi sistem informasi pemakaman terdepan yang memberikan
+                                    pelayanan prima dengan teknologi modern</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-3 text-green-300">Misi</h4>
+                                <ul class="text-gray-300 space-y-2">
+                                    <li>• Memberikan layanan digital yang mudah dan efisien</li>
+                                    <li>• Meningkatkan transparansi dalam pengelolaan pemakaman</li>
+                                    <li>• Mengoptimalkan penggunaan teknologi untuk masyarakat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <!-- Card 3 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-          <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-            <!-- Icon Pindah -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-green-600 mb-2">Pindah Makam</h3>
-          <p class="text-gray-600 mb-4">Layanan permohonan untuk memindahkan jenazah ke lokasi makam lain sesuai ketentuan.</p>
-          <button class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
-        </div>
-  
-        <!-- Card 4 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-          <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-            <!-- Icon Mobil -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13h18l-1.5-4.5a2 2 0 00-1.9-1.5H6.4a2 2 0 00-1.9 1.5L3 13zM3 13v6h3v-2h12v2h3v-6M5 19h.01M19 19h.01"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-green-600 mb-2">Mobil Jenazah</h3>
-          <p class="text-gray-600 mb-4">Penyediaan layanan sewa mobil jenazah untuk kebutuhan masyarakat.</p>
-          <button class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
-        </div>
-  
-        <!-- Card 5 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-          <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-            <!-- Icon Search -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-green-600 mb-2">Informasi TPU dan Pencarian Makam</h3>
-          <p class="text-gray-600 mb-4">Layanan informasi lokasi TPU serta fasilitas pencarian makam secara online maupun offline.</p>
-          <button class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Lihat Info</button>
-        </div>
-  
-      </div>
-    </div>
-  </section>
+    </section>
 
 
-        
+    <!-- Services Section -->
+
+    <section id="layanan" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+                    Fasilitas & Layanan Pemakaman Umum
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-medium">
+                    Dinas Perumahan & Permukiman <br>
+                    Pemakaman Umum
+                </p>
+            </div>
+
+            <!-- Grid Card -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                        <!-- Icon Kuburan -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 21h12M12 3v18" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Pemakaman Baru / Tumpang</h3>
+                    <p class="text-gray-600 mb-4">Layanan permohonan untuk pemakaman baru atau pemakaman tumpang sesuai
+                        prosedur yang berlaku.</p>
+                    <button
+                        class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center mb-4">
+                        <!-- Icon Refresh -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v6h6M20 20v-6h-6M4 14a8 8 0 0015.5 2M20 10a8 8 0 00-15.5-2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Daftar Ulang Tanah Makam</h3>
+                    <p class="text-gray-600 mb-4">Layanan untuk memperpanjang atau melakukan daftar ulang tanah makam
+                        yang sudah ada.</p>
+                    <button
+                        class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                        <!-- Icon Pindah -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Pindah Makam</h3>
+                    <p class="text-gray-600 mb-4">Layanan permohonan untuk memindahkan jenazah ke lokasi makam lain
+                        sesuai ketentuan.</p>
+                    <button
+                        class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                        <!-- Icon Mobil -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 13h18l-1.5-4.5a2 2 0 00-1.9-1.5H6.4a2 2 0 00-1.9 1.5L3 13zM3 13v6h3v-2h12v2h3v-6M5 19h.01M19 19h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Mobil Jenazah</h3>
+                    <p class="text-gray-600 mb-4">Penyediaan layanan sewa mobil jenazah untuk kebutuhan masyarakat.</p>
+                    <button
+                        class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Ajukan</button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                        <!-- Icon Search -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-2">Informasi TPU dan Pencarian Makam</h3>
+                    <p class="text-gray-600 mb-4">Layanan informasi lokasi TPU serta fasilitas pencarian makam secara
+                        online maupun offline.</p>
+                    <button
+                        class="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition">Lihat
+                        Info</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full opacity-5 -translate-x-48 -translate-y-48"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full opacity-5 translate-x-48 translate-y-48"></div>
+            <div
+                class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full opacity-5 -translate-x-48 -translate-y-48">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full opacity-5 translate-x-48 translate-y-48">
+            </div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center max-w-4xl mx-auto">
@@ -378,10 +450,12 @@
                     Bergabunglah dengan ribuan pengguna yang telah merasakan kemudahan sistem informasi pemakaman modern
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
-                    <button class="bg-white text-green-600 px-10 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <button
+                        class="bg-white text-green-600 px-10 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                         Daftar Sekarang
                     </button>
-                    <button class="border-2 border-white text-white px-10 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-green-600">
+                    <button
+                        class="border-2 border-white text-white px-10 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-green-600">
                         Video Demo
                     </button>
                 </div>
@@ -389,128 +463,132 @@
         </div>
     </section>
 
-<!-- Search Section -->
-<section class="relative bg-gradient-to-br from-green-50 via-white to-green-100 py-20 overflow-hidden">
-    <!-- Background Effect -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-24 -left-24 w-72 h-72 bg-green-200/40 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-green-300/30 rounded-full blur-3xl"></div>
-    </div>
-  
-    <div class="max-w-6xl mx-auto px-6 relative">
-      <!-- Heading -->
-      <div class="text-center mb-14">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-5 text-gray-900 tracking-tight">
-          Cari Lokasi Makam dengan Mudah
-        </h1>
-        <p class="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-          Temukan lokasi makam secara cepat, akurat, dan praktis dengan teknologi pemetaan digital terkini.
-        </p>
-      </div>
-  
-      <!-- Search Box -->
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-green-200 shadow-2xl transition-all duration-300 hover:shadow-green-200/60">
-  
-          <!-- Search Bar -->
-          <div class="relative mb-8">
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                <i class="fas fa-search text-green-600 text-xl"></i>
-              </div>
-              <input 
-                type="text" 
-                id="searchInput"
-                placeholder="Cari nama almarhum, nomor makam, atau lokasi..."
-                class="w-full pl-14 pr-36 py-5 text-gray-900 placeholder-gray-400 bg-white/70 rounded-xl border-2 border-green-300 focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300 shadow-md"
-              >
-              <div class="absolute inset-y-0 right-0 flex items-center pr-3 space-x-2">
-                <!-- Current Location Button -->
-                <button 
-                  id="locationBtn"
-                  class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-300 focus:outline-none"
-                >
-                  <i class="fas fa-location-arrow"></i>
-                  <span class="hidden sm:inline">Lokasi</span>
-                </button>
-                <!-- Search Button -->
-                <button 
-                  id="searchBtn"
-                  class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-400 focus:outline-none"
-                >
-                  <i class="fas fa-search"></i>
-                  Cari
-                </button>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Search Filters -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            <select class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-              <option value="">Pilih Area Pemakaman</option>
-              <option value="area-a">Area A - Umum</option>
-              <option value="area-b">Area B - Khusus</option>
-              <option value="area-c">Area C - VIP</option>
-              <option value="area-d">Area D - Keluarga</option>
-            </select>
-            
-            <select class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-              <option value="">Tahun Pemakaman</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="older">Lebih Lama</option>
-            </select>
-            
-            <select class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-              <option value="">Jenis Makam</option>
-              <option value="tanah">Tanah</option>
-              <option value="semen">Semen</option>
-              <option value="marmer">Marmer</option>
-              <option value="granit">Granit</option>
-            </select>
-          </div>
-  
-          <!-- Quick Search Suggestions -->
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="text-green-700 font-semibold">Pencarian Populer:</span>
-            <button class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-              Blok A1-A50
-            </button>
-            <button class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-              Area VIP
-            </button>
-            <button class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-              Makam Keluarga
-            </button>
-          </div>
+    <!-- Search Section -->
+    <section class="relative bg-gradient-to-br from-green-50 via-white to-green-100 py-20 overflow-hidden">
+        <!-- Background Effect -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-green-200/40 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-green-300/30 rounded-full blur-3xl"></div>
         </div>
-      </div>
-    </div>
-  </section>
-  
+
+        <div class="max-w-6xl mx-auto px-6 relative">
+            <!-- Heading -->
+            <div class="text-center mb-14">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-5 text-gray-900 tracking-tight">
+                    Cari Lokasi Makam dengan Mudah
+                </h1>
+                <p class="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                    Temukan lokasi makam secara cepat, akurat, dan praktis dengan teknologi pemetaan digital terkini.
+                </p>
+            </div>
+
+            <!-- Search Box -->
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-green-200 shadow-2xl transition-all duration-300 hover:shadow-green-200/60">
+
+                    <!-- Search Bar -->
+                    <div class="relative mb-8">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-green-600 text-xl"></i>
+                            </div>
+                            <input type="text" id="searchInput"
+                                placeholder="Cari nama almarhum, nomor makam, atau lokasi..."
+                                class="w-full pl-14 pr-36 py-5 text-gray-900 placeholder-gray-400 bg-white/70 rounded-xl border-2 border-green-300 focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300 shadow-md">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 space-x-2">
+                                <!-- Current Location Button -->
+                                <button id="locationBtn"
+                                    class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-300 focus:outline-none">
+                                    <i class="fas fa-location-arrow"></i>
+                                    <span class="hidden sm:inline">Lokasi</span>
+                                </button>
+                                <!-- Search Button -->
+                                <button id="searchBtn"
+                                    class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-400 focus:outline-none">
+                                    <i class="fas fa-search"></i>
+                                    Cari
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Filters -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                        <select
+                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
+                            <option value="">Pilih Area Pemakaman</option>
+                            <option value="area-a">Area A - Umum</option>
+                            <option value="area-b">Area B - Khusus</option>
+                            <option value="area-c">Area C - VIP</option>
+                            <option value="area-d">Area D - Keluarga</option>
+                        </select>
+
+                        <select
+                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
+                            <option value="">Tahun Pemakaman</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="older">Lebih Lama</option>
+                        </select>
+
+                        <select
+                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
+                            <option value="">Jenis Makam</option>
+                            <option value="tanah">Tanah</option>
+                            <option value="semen">Semen</option>
+                            <option value="marmer">Marmer</option>
+                            <option value="granit">Granit</option>
+                        </select>
+                    </div>
+
+                    <!-- Quick Search Suggestions -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <span class="text-green-700 font-semibold">Pencarian Populer:</span>
+                        <button
+                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
+                            Blok A1-A50
+                        </button>
+                        <button
+                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
+                            Area VIP
+                        </button>
+                        <button
+                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
+                            Makam Keluarga
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Floating Action Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <button class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-110 animate-glow">
+        <button
+            class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-110 animate-glow">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                </path>
             </svg>
         </button>
     </div>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-24 right-6 w-12 h-12 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center opacity-0 transition-all duration-300 hover:bg-green-500 z-50">
+    <button id="scrollTop"
+        class="fixed bottom-24 right-6 w-12 h-12 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center opacity-0 transition-all duration-300 hover:bg-green-500 z-50">
         <svg class="w-6 h-6 text-green-400 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
 
-    
+
     <!-- Gallery Section -->
-     <section id="galeri" class="py-20 bg-white">
+    <section id="galeri" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <!-- Header -->
             <div class="text-center mb-16">
@@ -520,91 +598,110 @@
                 </p>
             </div>
 
-        
-        <!-- Gallery Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    
-            <!-- Gallery Item 1 -->
-            <div class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img src="asset/img/makam.png" alt="Area Pemakaman" class="w-full h-full object-cover aspect-square">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div class="p-4 text-white">
-                        <h3 class="font-bold text-lg">Area Pemakaman Utama</h3>
-                        <p class="text-sm text-gray-200">Fasilitas pemakaman terkelola rapi & teratur</p>
+
+            <!-- Gallery Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- Gallery Item 1 -->
+                <div
+                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <img src="asset/img/makam.png" alt="Area Pemakaman"
+                        class="w-full h-full object-cover aspect-square">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-bold text-lg">Area Pemakaman Utama</h3>
+                            <p class="text-sm text-gray-200">Fasilitas pemakaman terkelola rapi & teratur</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Gallery Item 2 -->
-            <div class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img src="asset/img/ambulance.jpeg" alt="Mobil Jenazah" class="w-full h-full object-cover aspect-square">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div class="p-4 text-white">
-                        <h3 class="font-bold text-lg">Layanan Ambulance Jenazah</h3>
-                        <p class="text-sm text-gray-200">Transportasi jenazah dengan fasilitas aman & nyaman</p>
+
+                <!-- Gallery Item 2 -->
+                <div
+                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <img src="asset/img/ambulance.jpeg" alt="Mobil Jenazah"
+                        class="w-full h-full object-cover aspect-square">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-bold text-lg">Layanan Ambulance Jenazah</h3>
+                            <p class="text-sm text-gray-200">Transportasi jenazah dengan fasilitas aman & nyaman</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Gallery Item 3 -->
-            <div class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img src="asset/img/org.jpeg" alt="Petugas Pemakaman" class="w-full h-full object-cover aspect-square">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div class="p-4 text-white">
-                        <h3 class="font-bold text-lg">Petugas Pemakaman</h3>
-                        <p class="text-sm text-gray-200">Tim profesional dalam pelayanan pemakaman</p>
+
+                <!-- Gallery Item 3 -->
+                <div
+                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <img src="asset/img/org.jpeg" alt="Petugas Pemakaman"
+                        class="w-full h-full object-cover aspect-square">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-bold text-lg">Petugas Pemakaman</h3>
+                            <p class="text-sm text-gray-200">Tim profesional dalam pelayanan pemakaman</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Gallery Item 4 -->
-            <div class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img src="asset/img/loket.jpg" alt="Pelayanan Kantor" class="w-full h-full object-cover aspect-square">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div class="p-4 text-white">
-                        <h3 class="font-bold text-lg">Kantor Pelayanan</h3>
-                        <p class="text-sm text-gray-200">Loket pelayanan langsung untuk masyarakat</p>
+
+                <!-- Gallery Item 4 -->
+                <div
+                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <img src="asset/img/loket.jpg" alt="Pelayanan Kantor"
+                        class="w-full h-full object-cover aspect-square">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-bold text-lg">Kantor Pelayanan</h3>
+                            <p class="text-sm text-gray-200">Loket pelayanan langsung untuk masyarakat</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Gallery Item 5 -->
-            <div class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img src="asset/img/ziarah.jpg" alt="Sistem Digital" class="w-full h-full object-cover aspect-square">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div class="p-4 text-white">
-                        <h3 class="font-bold text-lg">Kegiatan Ziarah</h3>
-                        <p class="text-sm text-gray-200">aktivitas peziarah atau doa bersama.</p>
+
+                <!-- Gallery Item 5 -->
+                <div
+                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <img src="asset/img/ziarah.jpg" alt="Sistem Digital"
+                        class="w-full h-full object-cover aspect-square">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="font-bold text-lg">Kegiatan Ziarah</h3>
+                            <p class="text-sm text-gray-200">aktivitas peziarah atau doa bersama.</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-           
-        </div>
-        
-        
-   
+
+
+
             <!-- View More Button -->
             <div class="text-center mt-12">
-                <button class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 animate-glow">
+                <button
+                    class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 animate-glow">
                     Lihat Semua Galeri
                 </button>
             </div>
         </div>
- 
-</section>
+
+    </section>
 
     <!-- Modal for Gallery -->
     <div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4">
         <div class="relative max-w-4xl w-full">
             <button id="closeModal" class="absolute -top-12 right-0 text-white hover:text-green-400 transition-colors">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
                 </svg>
             </button>
             <div id="modalContent" class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-8 text-center">
                 <div class="w-full h-64 bg-white bg-opacity-20 rounded-xl mb-6 flex items-center justify-center">
                     <svg class="w-24 h-24 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                        </path>
                     </svg>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Judul Gambar</h3>
@@ -614,100 +711,80 @@
     </div>
 
     <!-- Contact Section -->
-<section id="kontak" class="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 relative overflow-hidde">
-    <div class="container mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-start">
-        
-        <!-- Left: Contact Info -->
-        <div>
-          <h2 class="text-4xl font-bold text-white  mb-6">Contact Us</h2>
-          <p class="text-lg text-white mb-8">
-            Email, call, or complete the form to learn how SIPAMU dapat membantu Anda. 
-            Tim kami siap menjawab semua pertanyaan Anda.
-          </p>
-          
-          <div class="space-y-6 text-white ">
-            <div>
-              <h3 class="font-semibold text-white ">Email</h3>
-              <p>info@sipamu.go.id</p>
-            </div>
-            <div>
-              <h3 class="font-semibold text-white ">Telepon</h3>
-              <p>+62 21 1234 5678</p>
-            </div>
-            <div>
-              <h3 class="font-semibold text-white ">Alamat</h3>
-              <p>Jl. Pemakaman Umum No. 123<br>Bogor, Indonesia</p>
-            </div>
-            <div>
-              <h3 class="font-semibold text-white ">Jam Operasional</h3>
-              <p>Senin - Jumat: 08:00 - 17:00 WIB<br>Online: 24/7</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Right: Contact Form -->
-        <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-          <form class="space-y-5">
-            <div class="grid grid-cols-2 gap-4">
-              <input 
-                type="text" 
-                placeholder="First name" 
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg 
+    <section id="kontak"
+        class="py-20 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 relative overflow-hidde">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left: Contact Info -->
+                <div>
+                    <h2 class="text-4xl font-bold text-white  mb-6">Contact Us</h2>
+                    <p class="text-lg text-white mb-8">
+                        Email, call, or complete the form to learn how SIPAMU dapat membantu Anda.
+                        Tim kami siap menjawab semua pertanyaan Anda.
+                    </p>
+
+                    <div class="space-y-6 text-white ">
+                        <div>
+                            <h3 class="font-semibold text-white ">Email</h3>
+                            <p>info@sipamu.go.id</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white ">Telepon</h3>
+                            <p>+62 21 1234 5678</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white ">Alamat</h3>
+                            <p>Jl. Pemakaman Umum No. 123<br>Bogor, Indonesia</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white ">Jam Operasional</h3>
+                            <p>Senin - Jumat: 08:00 - 17:00 WIB<br>Online: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                    <form class="space-y-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First name" class="w-full px-4 py-3 border border-gray-300 rounded-lg 
                        focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
-                       text-gray-800 placeholder-gray-400"
-              >
-              <input 
-                type="text" 
-                placeholder="Last name" 
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                       text-gray-800 placeholder-gray-400">
+                            <input type="text" placeholder="Last name" class="w-full px-4 py-3 border border-gray-300 rounded-lg 
                        focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
-                       text-gray-800 placeholder-gray-400"
-              >
+                       text-gray-800 placeholder-gray-400">
+                        </div>
+
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
+                     text-gray-800 placeholder-gray-400">
+
+                        <input type="text" placeholder="Phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
+                     text-gray-800 placeholder-gray-400">
+
+                        <textarea rows="4" placeholder="How can we help?" class="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
+                     text-gray-800 placeholder-gray-400 resize-none"></textarea>
+
+                        <button type="submit"
+                            class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition">
+                            Submit
+                        </button>
+                    </form>
+
+                    <p class="text-xs text-gray-500 mt-4">
+                        Dengan mengirimkan form ini, Anda setuju dengan <a href="#" class="underline">Kebijakan
+                            Privasi</a>.
+                    </p>
+                </div>
+
             </div>
-          
-            <input 
-              type="email" 
-              placeholder="Your email" 
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg 
-                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
-                     text-gray-800 placeholder-gray-400"
-            >
-          
-            <input 
-              type="text" 
-              placeholder="Phone number" 
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg 
-                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
-                     text-gray-800 placeholder-gray-400"
-            >
-          
-            <textarea 
-              rows="4" 
-              placeholder="How can we help?" 
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg 
-                     focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none 
-                     text-gray-800 placeholder-gray-400 resize-none"
-            ></textarea>
-          
-            <button 
-              type="submit" 
-              class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition"
-            >
-              Submit
-            </button>
-          </form>
-          
-          <p class="text-xs text-gray-500 mt-4">
-            Dengan mengirimkan form ini, Anda setuju dengan <a href="#" class="underline">Kebijakan Privasi</a>.
-          </p>
         </div>
-        
-      </div>
-    </div>
-  </section>
-  
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-950 pt-16 pb-8">
@@ -717,46 +794,68 @@
                 <!-- Company Info -->
                 <div class="lg:col-span-2">
                     <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-white  to-emerald-500 rounded-xl flex items-center justify-center animate-glow">
-                           <img src="asset/img/logo.png" class="w- h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                </img>
+                        <div
+                            class="w-12 h-12 bg-white  to-emerald-500 rounded-xl flex items-center justify-center animate-glow">
+                            <img src="asset/img/logo.png" class="w- h-10 text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                            </img>
                         </div>
                         <span class="text-3xl font-bold gradient-text">SIPAMU</span>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
-                        Sistem Informasi Pemakaman Modern yang menghadirkan solusi digital terdepan untuk pengelolaan pemakaman yang efisien, transparan, dan mudah diakses oleh seluruh masyarakat.
+                        Sistem Informasi Pemakaman Modern yang menghadirkan solusi digital terdepan untuk pengelolaan
+                        pemakaman yang efisien, transparan, dan mudah diakses oleh seluruh masyarakat.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
                             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
                             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center hover:from-green-500 hover:to-emerald-500 transition-all duration-300 transform hover:scale-110">
                             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/>
+                                <path
+                                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z" />
                             </svg>
                         </a>
-                                         </div>
+                    </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div>
                     <h3 class="text-xl font-bold text-green-400 mb-6">Menu Cepat</h3>
                     <ul class="space-y-3">
-                        <li><a href="#beranda" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Beranda</a></li>
-                        <li><a href="#layanan" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Layanan</a></li>
-                        <li><a href="#tentang" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Tentang Kami</a></li>
-                        <li><a href="#galeri" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Galeri</a></li>
-                        <li><a href="#kontak" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Kontak</a></li>
+                        <li><a href="#beranda"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Beranda</a>
+                        </li>
+                        <li><a href="#layanan"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Layanan</a>
+                        </li>
+                        <li><a href="#tentang"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Tentang
+                                Kami</a></li>
+                        <li><a href="#galeri"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Galeri</a>
+                        </li>
+                        <li><a href="#kontak"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Kontak</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -764,106 +863,114 @@
                 <div>
                     <h3 class="text-xl font-bold text-green-400 mb-6">Layanan</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pendaftaran Makam</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Makam Tumpang</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pencarian Lokasi</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pembayaran Online</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Support 24/7
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pendaftaran
+                                Makam</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors duration-300">Makam
+                                Tumpang</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pencarian
+                                Lokasi</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Pembayaran
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-green-400 transition-colors duration-300">Support 24/7
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+                                <script>
+                                    // Smooth scrolling for navigation links
+                                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                        anchor.addEventListener('click', function (e) {
+                                            e.preventDefault();
+                                            const target = document.querySelector(this.getAttribute('href'));
+                                            if (target) {
+                                                target.scrollIntoView({
+                                                    behavior: 'smooth',
+                                                    block: 'start'
+                                                });
+                                            }
+                                        });
+                                    });
 
-        // Scroll to top functionality
-        const scrollTopBtn = document.getElementById('scrollTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTopBtn.style.opacity = '1';
-            } else {
-                scrollTopBtn.style.opacity = '0';
-            }
-        });
+                                    // Scroll to top functionality
+                                    const scrollTopBtn = document.getElementById('scrollTop');
 
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+                                    window.addEventListener('scroll', () => {
+                                        if (window.pageYOffset > 300) {
+                                            scrollTopBtn.style.opacity = '1';
+                                        } else {
+                                            scrollTopBtn.style.opacity = '0';
+                                        }
+                                    });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+                                    scrollTopBtn.addEventListener('click', () => {
+                                        window.scrollTo({
+                                            top: 0,
+                                            behavior: 'smooth'
+                                        });
+                                    });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+                                    // Intersection Observer for animations
+                                    const observerOptions = {
+                                        threshold: 0.1,
+                                        rootMargin: '0px 0px -50px 0px'
+                                    };
 
-        // Observe all animated elements
-        document.querySelectorAll('.animate-slide-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(40px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
+                                    const observer = new IntersectionObserver((entries) => {
+                                        entries.forEach(entry => {
+                                            if (entry.isIntersecting) {
+                                                entry.target.style.opacity = '1';
+                                                entry.target.style.transform = 'translateY(0)';
+                                            }
+                                        });
+                                    }, observerOptions);
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple validation
-            const inputs = this.querySelectorAll('input, textarea');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    input.style.borderColor = '#ef4444';
-                    isValid = false;
-                } else {
-                    input.style.borderColor = '#10b981';
-                }
-            });
-            
-            if (isValid) {
-                // Show success message
-                const button = this.querySelector('button[type="submit"]');
-                const originalText = button.textContent;
-                button.textContent = 'Pesan Terkirim!';
-                button.style.background = 'linear-gradient(to right, #10b981, #059669)';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '';
-                    this.reset();
-                }, 3000);
-            }
-        });
+                                    // Observe all animated elements
+                                    document.querySelectorAll('.animate-slide-up').forEach(el => {
+                                        el.style.opacity = '0';
+                                        el.style.transform = 'translateY(40px)';
+                                        el.style.transition = 'all 0.6s ease-out';
+                                        observer.observe(el);
+                                    });
 
-        // Mobile menu toggle
-const mobileMenuButton = document.querySelector('.md\\:hidden');
-const mobileMenu = document.createElement('div');
-mobileMenu.className =
-  'absolute top-full left-0 w-full md:hidden bg-white border-t border-green-200 shadow-lg transition-all duration-300 ease-out z-50';
-mobileMenu.innerHTML = `
+                                    // Form submission
+                                    document.querySelector('form').addEventListener('submit', function (e) {
+                                        e.preventDefault();
+
+                                        // Simple validation
+                                        const inputs = this.querySelectorAll('input, textarea');
+                                        let isValid = true;
+
+                                        inputs.forEach(input => {
+                                            if (!input.value.trim()) {
+                                                input.style.borderColor = '#ef4444';
+                                                isValid = false;
+                                            } else {
+                                                input.style.borderColor = '#10b981';
+                                            }
+                                        });
+
+                                        if (isValid) {
+                                            // Show success message
+                                            const button = this.querySelector('button[type="submit"]');
+                                            const originalText = button.textContent;
+                                            button.textContent = 'Pesan Terkirim!';
+                                            button.style.background = 'linear-gradient(to right, #10b981, #059669)';
+
+                                            setTimeout(() => {
+                                                button.textContent = originalText;
+                                                button.style.background = '';
+                                                this.reset();
+                                            }, 3000);
+                                        }
+                                    });
+
+                                    // Mobile menu toggle
+                                    const mobileMenuButton = document.querySelector('.md\\:hidden');
+                                    const mobileMenu = document.createElement('div');
+                                    mobileMenu.className =
+                                        'absolute top-full left-0 w-full md:hidden bg-white border-t border-green-200 shadow-lg transition-all duration-300 ease-out z-50';
+                                    mobileMenu.innerHTML = `
     <div class="px-6 py-4 space-y-4">
         <a href="#beranda" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Beranda</a>
         <a href="#layanan" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Layanan</a>
@@ -871,39 +978,40 @@ mobileMenu.innerHTML = `
         <a href="#kontak" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Kontak</a>
     </div>
 `;
-mobileMenu.style.display = 'none';
-mobileMenu.style.opacity = '0';
-mobileMenu.style.transform = 'translateY(-10px)';
+                                    mobileMenu.style.display = 'none';
+                                    mobileMenu.style.opacity = '0';
+                                    mobileMenu.style.transform = 'translateY(-10px)';
 
-// Pastikan parent punya posisi relatif (biar absolute nempel di navbar)
-mobileMenuButton.parentNode.classList.add('relative');
-mobileMenuButton.parentNode.appendChild(mobileMenu);
+                                    // Pastikan parent punya posisi relatif (biar absolute nempel di navbar)
+                                    mobileMenuButton.parentNode.classList.add('relative');
+                                    mobileMenuButton.parentNode.appendChild(mobileMenu);
 
-mobileMenuButton.addEventListener('click', () => {
-  if (mobileMenu.style.display === 'none') {
-    mobileMenu.style.display = 'block';
-    setTimeout(() => {
-      mobileMenu.style.opacity = '1';
-      mobileMenu.style.transform = 'translateY(0)';
-    }, 10);
-  } else {
-    mobileMenu.style.opacity = '0';
-    mobileMenu.style.transform = 'translateY(-10px)';
-    setTimeout(() => {
-      mobileMenu.style.display = 'none';
-    }, 300); // sesuai transition
-  }
-});
+                                    mobileMenuButton.addEventListener('click', () => {
+                                        if (mobileMenu.style.display === 'none') {
+                                            mobileMenu.style.display = 'block';
+                                            setTimeout(() => {
+                                                mobileMenu.style.opacity = '1';
+                                                mobileMenu.style.transform = 'translateY(0)';
+                                            }, 10);
+                                        } else {
+                                            mobileMenu.style.opacity = '0';
+                                            mobileMenu.style.transform = 'translateY(-10px)';
+                                            setTimeout(() => {
+                                                mobileMenu.style.display = 'none';
+                                            }, 300); // sesuai transition
+                                        }
+                                    });
 
 
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('#beranda');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-    </script>
+                                    // Parallax effect for hero section
+                                    window.addEventListener('scroll', () => {
+                                        const scrolled = window.pageYOffset;
+                                        const hero = document.querySelector('#beranda');
+                                        if (hero) {
+                                            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                                        }
+                                    });
+                                </script>
 </body>
+
 </html>
