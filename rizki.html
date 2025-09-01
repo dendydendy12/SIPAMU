@@ -3,437 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer SIPAMU</title>
+    <title>SIPAMU - Pencarian Makam</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(180deg); }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .floating { animation: float 6s ease-in-out infinite; }
-        .fade-in { animation: fadeIn 0.8s ease-out; }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #10b981, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-    </style>
 </head>
-<body class="bg-gray-100">
-    <!-- Demo Content -->
-    <div class="flex-1 flex items-center justify-center min-h-screen">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-700 mb-4">SIPAMU</h1>
-            <p class="text-gray-600">Scroll ke bawah untuk melihat footer</p>
+<body class="bg-gray-50 min-h-screen">
+    
+    <!-- Header Section -->
+    <div class="bg-gradient-to-br from-green-800 via-green-700 to-green-600 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-3xl flex items-center justify-center mr-4 backdrop-blur-sm">
+                        <i class="fas fa-monument text-white text-3xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-4xl font-bold text-white mb-2">SIPAMU</h1>
+                        <p class="text-green-200 text-lg">Sistem Informasi Pemakaman Umum</p>
+                    </div>
+                </div>
+                <p class="text-green-100 text-xl max-w-2xl mx-auto">
+                    Temukan lokasi makam dengan mudah dan akurat menggunakan teknologi pemetaan digital
+                </p>
+            </div>
+
+
+                          <!-- Search Section -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20">
+                    
+                    <!-- Search Bar -->
+                    <div class="relative mb-6">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-green-600 text-xl"></i>
+                            </div>
+                            <input 
+                                type="text" 
+                                id="searchInput"
+                                placeholder="Cari nama almarhum, nomor makam, atau lokasi..."
+                                class="w-full pl-14 pr-32 py-5 text-lg bg-white rounded-xl border-2 border-green-200 focus:border-green-500 focus:ring-4 focus:ring-green-200 focus:outline-none transition-all duration-300 shadow-lg"
+                            >
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-2 space-x-2">
+                                <!-- Current Location Button -->
+                                <button 
+                                    id="locationBtn"
+                                    class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-300 focus:outline-none"
+                                    title="Gunakan Lokasi Saat Ini"
+                                >
+                                    <i class="fas fa-location-arrow mr-2"></i>
+                                    <span class="hidden sm:inline">Lokasi</span>
+                                </button>
+                                <!-- Search Button -->
+                                <button 
+                                    id="searchBtn"
+                                    class="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-300 focus:outline-none font-semibold"
+                                >
+                                    <i class="fas fa-search mr-2"></i>
+                                    Cari
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Filters -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <select class="px-4 py-3 bg-white border-2 border-green-200 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 focus:outline-none transition-all duration-300">
+                            <option value="">Pilih Area Pemakaman</option>
+                            <option value="area-a">Area A - Umum</option>
+                            <option value="area-b">Area B - Khusus</option>
+                            <option value="area-c">Area C - VIP</option>
+                            <option value="area-d">Area D - Keluarga</option>
+                        </select>
+                        
+                        <select class="px-4 py-3 bg-white border-2 border-green-200 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 focus:outline-none transition-all duration-300">
+                            <option value="">Tahun Pemakaman</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="older">Lebih Lama</option>
+                        </select>
+                        
+                        <select class="px-4 py-3 bg-white border-2 border-green-200 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 focus:outline-none transition-all duration-300">
+                            <option value="">Jenis Makam</option>
+                            <option value="tanah">Tanah</option>
+                            <option value="semen">Semen</option>
+                            <option value="marmer">Marmer</option>
+                            <option value="granit">Granit</option>
+                        </select>
+                    </div>
+
+                    <!-- Quick Search Suggestions -->
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="text-green-200 font-medium">Pencarian Populer:</span>
+                        <button class="bg-green-600 bg-opacity-50 hover:bg-opacity-70 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 hover:scale-105 border border-green-400 border-opacity-30">
+                            Blok A1-A50
+                        </button>
+                        <button class="bg-green-600 bg-opacity-50 hover:bg-opacity-70 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 hover:scale-105 border border-green-400 border-opacity-30">
+                            Area VIP
+                        </button>
+                        <button class="bg-green-600 bg-opacity-50 hover:bg-opacity-70 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 hover:scale-105 border border-green-400 border-opacity-30">
+                            Makam Keluarga
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="relative bg-gradient-to-br from-green-800 via-green-900 to-green-950 text-white overflow-hidden">
-        <!-- Decorative Wave -->
-        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V120H1200V0C1200,0 900,60 600,60S0,0 0,0Z" fill="#f3f4f6"></path>
-            </svg>
-        </div>
-
-        <!-- Floating Background Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="floating absolute top-20 left-10 text-green-300 opacity-20">
-                <i class="fas fa-leaf text-3xl"></i>
-            </div>
-            <div class="floating absolute top-32 right-20 text-green-300 opacity-20" style="animation-delay: 2s;">
-                <i class="fas fa-dove text-2xl"></i>
-            </div>
-            <div class="floating absolute bottom-32 left-1/4 text-green-300 opacity-20" style="animation-delay: 4s;">
-                <i class="fas fa-heart text-xl"></i>
-            </div>
-            <div class="floating absolute top-40 right-1/3 text-green-300 opacity-20" style="animation-delay: 1s;">
-                <i class="fas fa-star text-lg"></i>
-            </div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16">
-            <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                
-                <!-- About Section -->
-                <div class="fade-in space-y-6">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-monument text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold gradient-text">SIPAMU</h3>
-                    </div>
-                    <p class="text-green-100 leading-relaxed">
-                        Sistem Informasi Pemakaman Umum yang memudahkan pengelolaan dan administrasi pemakaman dengan teknologi digital terdepan.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-green-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                            <i class="fab fa-facebook-f text-sm"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-green-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                            <i class="fab fa-instagram text-sm"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-green-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                            <i class="fab fa-whatsapp text-sm"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-green-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                            <i class="fab fa-youtube text-sm"></i>
-                        </a>
-                    </div>
+    <!-- Results Section -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Search Results -->
+            <div class="space-y-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                        <i class="fas fa-list mr-3 text-green-600"></i>
+                        Hasil Pencarian
+                    </h2>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        5 hasil ditemukan
+                    </span>
                 </div>
 
-                <!-- Services Section -->
-                <div class="fade-in" style="animation-delay: 0.2s;">
-                    <h4 class="text-lg font-semibold text-green-300 mb-6 flex items-center">
-                        <i class="fas fa-cogs mr-3 text-green-400"></i>
-                        Layanan Kami
-                    </h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-search mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Pencarian Makam</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-calendar-alt mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Reservasi Pemakaman</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-file-alt mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Administrasi Digital</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-map-marker-alt mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Peta Lokasi</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-headset mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Bantuan 24/7</span>
-                        </a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Section -->
-                <div class="fade-in" style="animation-delay: 0.4s;">
-                    <h4 class="text-lg font-semibold text-green-300 mb-6 flex items-center">
-                        <i class="fas fa-phone mr-3 text-green-400"></i>
-                        Hubungi Kami
-                    </h4>
-                    <div class="space-y-4">
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-map-marker-alt text-green-400 text-lg"></i>
-                                <div>
-                                    <p class="text-green-100 text-sm">Alamat</p>
-                                    <p class="text-green-200 font-medium">Jl. Pemakaman Umum No. 123</p>
-                                    <p class="text-green-200 font-medium">Jakarta Selatan, DKI Jakarta</p>
+                <!-- Search Result Cards -->
+                <div class="space-y-4" id="searchResults">
+                    <!-- Result Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg border border-green-100 p-6 hover:shadow-xl transition-all duration-300 hover:scale-102 cursor-pointer" onclick="showOnMap(-6.2088, 106.8456)">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Budi Santoso</h3>
+                                        <p class="text-green-600 font-semibold">Blok A - No. 125</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar mr-2 text-green-500"></i>
+                                        <span>15 Maret 2023</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-location-dot mr-2 text-green-500"></i>
+                                        <span>Area Umum</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="flex flex-col items-end space-y-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Aktif</span>
+                                <button class="text-green-600 hover:text-green-800 transition-colors duration-300">
+                                    <i class="fas fa-eye text-lg"></i>
+                                </button>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Result Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg border border-green-100 p-6 hover:shadow-xl transition-all duration-300 hover:scale-102 cursor-pointer" onclick="showOnMap(-6.2100, 106.8470)">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Siti Nurhaliza</h3>
+                                        <p class="text-green-600 font-semibold">Blok B - No. 089</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar mr-2 text-green-500"></i>
+                                        <span>08 Juli 2024</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-location-dot mr-2 text-green-500"></i>
+                                        <span>Area VIP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end space-y-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Aktif</span>
+                                <button class="text-green-600 hover:text-green-800 transition-colors duration-300">
+                                    <i class="fas fa-eye text-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg border border-green-100 p-6 hover:shadow-xl transition-all duration-300 hover:scale-102 cursor-pointer" onclick="showOnMap(-6.2075, 106.8445)">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                                        <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Ahmad Rahman</h3>
+                                        <p class="text-green-600 font-semibold">Blok C - No. 201</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar mr-2 text-green-500"></i>
+                                        <span>22 Januari 2024</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-location-dot mr-2 text-green-500"></i>
+                                        <span>Area Keluarga</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end space-y-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Aktif</span>
+                                <button class="text-green-600 hover:text-green-800 transition-colors duration-300">
+                                    <i class="fas fa-eye text-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-8">
+                    <div class="flex items-center space-x-2">
+                        <button class="w-10 h-10 bg-white border border-green-200 rounded-lg hover:bg-green-50 transition-colors duration-300">
+                            <i class="fas fa-chevron-left text-green-600"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-green-600 text-white rounded-lg">1</button>
+                        <button class="w-10 h-10 bg-white border border-green-200 rounded-lg hover:bg-green-50 transition-colors duration-300">2</button>
+                        <button class="w-10 h-10 bg-white border border-green-200 rounded-lg hover:bg-green-50 transition-colors duration-300">3</button>
+                        <button class="w-10 h-10 bg-white border border-green-200 rounded-lg hover:bg-green-50 transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-green-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Section -->
+            <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                        <i class="fas fa-map mr-3 text-green-600"></i>
+                        Peta Lokasi
+                    </h2>
+                    <div class="flex space-x-3">
+                        <button 
+                            id="satelliteBtn"
+                            class="bg-white border border-green-200 text-green-700 px-4 py-2 rounded-lg hover:bg-green-50 transition-all duration-300 focus:ring-4 focus:ring-green-200 focus:outline-none"
+                        >
+                            <i class="fas fa-satellite mr-2"></i>
+                            Satelit
+                        </button>
+                        <button 
+                            id="terrainBtn"
+                            class="bg-white border border-green-200 text-green-700 px-4 py-2 rounded-lg hover:bg-green-50 transition-all duration-300 focus:ring-4 focus:ring-green-200 focus:outline-none"
+                        >
+                            <i class="fas fa-mountain mr-2"></i>
+                            Terrain
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Map Container -->
+                <div class="relative">
+                    <div class="h-96 lg:h-128 bg-white rounded-2xl shadow-xl border border-green-100 overflow-hidden">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            id="googleMap"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8425216!3d-6.208763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sTaman%20Pemakaman%20Umum%20Tanah%20Kusir!5e0!3m2!1sen!2sid!4v1635123456789!5m2!1sen!2sid"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-2xl">
+                        </iframe>
                         
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-phone text-green-400 text-lg"></i>
-                                <div>
-                                    <p class="text-green-100 text-sm">Telepon</p>
-                                    <p class="text-green-200 font-medium">+62 21 1234-5678</p>
-                                </div>
-                            </div>
+                        <!-- Map Overlay Controls -->
+                        <div class="absolute top-4 left-4 space-y-3">
+                            <button class="w-12 h-12 bg-white bg-opacity-90 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 hover:scale-110" title="Zoom In">
+                                <i class="fas fa-plus text-green-600"></i>
+                            </button>
+                            <button class="w-12 h-12 bg-white bg-opacity-90 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 hover:scale-110" title="Zoom Out">
+                                <i class="fas fa-minus text-green-600"></i>
+                            </button>
+                            <button class="w-12 h-12 bg-white bg-opacity-90 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 hover:scale-110" title="Fullscreen">
+                                <i class="fas fa-expand text-green-600"></i>
+                            </button>
                         </div>
 
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-envelope text-green-400 text-lg"></i>
-                                <div>
-                                    <p class="text-green-100 text-sm">Email</p>
-                                    <p class="text-green-200 font-medium">info@sipamu.id</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Features Section -->
-                <div class="fade-in" style="animation-delay: 0.6s;">
-                    <h4 class="text-lg font-semibold text-green-300 mb-6 flex items-center">
-                        <i class="fas fa-gem mr-3 text-green-400"></i>
-                        Keunggulan
-                    </h4>
-                    <div class="space-y-4">
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300 group">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-shield-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-green-200 font-semibold">Aman & Terpercaya</h5>
-                                    <p class="text-green-100 text-sm">Data dilindungi enkripsi</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300 group">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-clock text-white"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-green-200 font-semibold">Akses 24/7</h5>
-                                    <p class="text-green-100 text-sm">Tersedia kapan saja</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="glass-effect rounded-lg p-4 hover:bg-white hover:bg-opacity-20 transition-all duration-300 group">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-mobile-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-green-200 font-semibold">Mobile Friendly</h5>
-                                    <p class="text-green-100 text-sm">Akses dari mana saja</p>
-                                </div>
+                        <!-- Current Location Indicator -->
+                        <div id="locationIndicator" class="absolute top-4 right-4 hidden">
+                            <div class="flex items-center bg-green-600 text-white px-4 py-2 rounded-full shadow-lg">
+                                <div class="w-3 h-3 bg-green-300 rounded-full mr-3 animate-pulse"></div>
+                                <span class="text-sm font-semibold">Lokasi Anda</span>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Quick Links Section -->
-            <div class="fade-in mb-12" style="animation-delay: 0.8s;">
-                <div class="glass-effect rounded-2xl p-8">
-                    <h4 class="text-xl font-bold text-green-300 mb-6 text-center flex items-center justify-center">
-                        <i class="fas fa-link mr-3 text-green-400"></i>
-                        Akses Cepat
-                    </h4>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <a href="#" class="glass-effect rounded-xl p-6 text-center hover:bg-white hover:bg-opacity-20 transition-all duration-300 group hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
-                                <i class="fas fa-search text-white text-2xl"></i>
+                    <!-- Map Legend -->
+                    <div class="absolute bottom-4 left-4 bg-white bg-opacity-95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-green-100">
+                        <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-green-600"></i>
+                            Keterangan
+                        </h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                                <span>Area Umum</span>
                             </div>
-                            <h5 class="font-semibold text-green-200 mb-2">Cari Makam</h5>
-                            <p class="text-green-100 text-sm">Temukan lokasi makam dengan mudah</p>
-                        </a>
-
-                        <a href="#" class="glass-effect rounded-xl p-6 text-center hover:bg-white hover:bg-opacity-20 transition-all duration-300 group hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
-                                <i class="fas fa-calendar-plus text-white text-2xl"></i>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                                <span>Area VIP</span>
                             </div>
-                            <h5 class="font-semibold text-green-200 mb-2">Booking</h5>
-                            <p class="text-green-100 text-sm">Reservasi slot pemakaman</p>
-                        </a>
-
-                        <a href="#" class="glass-effect rounded-xl p-6 text-center hover:bg-white hover:bg-opacity-20 transition-all duration-300 group hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
-                                <i class="fas fa-file-contract text-white text-2xl"></i>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                                <span>Area Keluarga</span>
                             </div>
-                            <h5 class="font-semibold text-green-200 mb-2">Surat Izin</h5>
-                            <p class="text-green-100 text-sm">Proses administrasi digital</p>
-                        </a>
-
-                        <a href="#" class="glass-effect rounded-xl p-6 text-center hover:bg-white hover:bg-opacity-20 transition-all duration-300 group hover:scale-105">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
-                                <i class="fas fa-headset text-white text-2xl"></i>
-                            </div>
-                            <h5 class="font-semibold text-green-200 mb-2">Bantuan</h5>
-                            <p class="text-green-100 text-sm">Customer service 24/7</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Info Grid -->
-            <div class="fade-in grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" style="animation-delay: 1s;">
-                <!-- Operating Hours -->
-                <div class="glass-effect rounded-xl p-6">
-                    <h5 class="font-semibold text-green-300 mb-4 flex items-center">
-                        <i class="fas fa-clock mr-3 text-green-400"></i>
-                        Jam Operasional
-                    </h5>
-                    <div class="space-y-2 text-green-100">
-                        <div class="flex justify-between">
-                            <span>Senin - Jumat</span>
-                            <span class="font-medium">08:00 - 17:00</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Sabtu</span>
-                            <span class="font-medium">08:00 - 15:00</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Minggu</span>
-                            <span class="font-medium">09:00 - 14:00</span>
-                        </div>
-                        <div class="mt-4 p-3 bg-green-700 bg-opacity-50 rounded-lg">
-                            <p class="text-green-200 text-sm">
-                                <i class="fas fa-info-circle mr-2"></i>
-                                Layanan darurat tersedia 24 jam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Contact -->
-                <div class="glass-effect rounded-xl p-6">
-                    <h5 class="font-semibold text-green-300 mb-4 flex items-center">
-                        <i class="fas fa-phone-alt mr-3 text-green-400"></i>
-                        Kontak Darurat
-                    </h5>
-                    <div class="space-y-4">
-                        <div class="bg-green-700 bg-opacity-50 rounded-lg p-4 hover:bg-opacity-70 transition-all duration-300">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-ambulance text-white"></i>
-                                </div>
-                                <div>
-                                    <p class="text-green-200 font-semibold">Hotline Darurat</p>
-                                    <p class="text-green-100">119 atau +62 811-1234-567</p>
-                                </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-red-500 rounded-full mr-3"></div>
+                                <span>Lokasi Anda</span>
                             </div>
                         </div>
-                        <div class="bg-green-700 bg-opacity-50 rounded-lg p-4 hover:bg-opacity-70 transition-all duration-300">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <i class="fab fa-whatsapp text-white"></i>
-                                </div>
-                                <div>
-                                    <p class="text-green-200 font-semibold">WhatsApp Admin</p>
-                                    <p class="text-green-100">+62 812-3456-789</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Legal Links -->
-                <div class="glass-effect rounded-xl p-6">
-                    <h5 class="font-semibold text-green-300 mb-4 flex items-center">
-                        <i class="fas fa-gavel mr-3 text-green-400"></i>
-                        Informasi Legal
-                    </h5>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-shield-alt mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Kebijakan Privasi</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-file-contract mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Syarat & Ketentuan</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-cookie-bite mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">Kebijakan Cookie</span>
-                        </a></li>
-                        <li><a href="#" class="text-green-100 hover:text-green-300 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-question-circle mr-3 text-green-400 group-hover:text-green-300"></i>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">FAQ</span>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Footer Bottom - Simple -->
-            <div class="border-t border-green-700 border-opacity-30 pt-6 mt-8">
-                <div class="text-center">
-                    <p class="text-green-200 mb-3">
-                        © 2025 SIPAMU - Sistem Informasi Pemakaman Umum. Seluruh hak cipta dilindungi.
-                    </p>
-                    <div class="flex flex-wrap justify-center space-x-6 text-sm text-green-100">
-                        <a href="#" class="hover:text-green-300 transition-colors duration-300">Kebijakan Privasi</a>
-                        <span>|</span>
-                        <a href="#" class="hover:text-green-300 transition-colors duration-300">Syarat & Ketentuan</a>
-                        <span>|</span>
-                        <a href="#" class="hover:text-green-300 transition-colors duration-300">Kontak</a>
-                        <span>|</span>
-                        <a href="#" class="hover:text-green-300 transition-colors duration-300">Bantuan</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Decorative Bottom Border -->
-        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600"></div>
-    </footer>
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mt-12">
+            <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+                <i class="fas fa-directions mr-3"></i>
+                Petunjuk Arah
+            </button>
+            <button class="bg-white border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+                <i class="fas fa-download mr-3"></i>
+                Unduh Peta
+            </button>
+            <button class="bg-white border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+                <i class="fas fa-share mr-3"></i>
+                Bagikan Lokasi
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="bg-green-50 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-database text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-green-800 mb-2">15,432</h3>
+                    <p class="text-green-600 font-semibold">Total Makam</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marked-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-green-800 mb-2">25</h3>
+                    <p class="text-green-600 font-semibold">Area Pemakaman</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-green-800 mb-2">8,750</h3>
+                    <p class="text-green-600 font-semibold">Keluarga Terlayani</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-green-800 mb-2">24/7</h3>
+                    <p class="text-green-600 font-semibold">Layanan Aktif</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        // Add smooth hover animations
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const locationBtn = document.getElementById('locationBtn');
+        const locationIndicator = document.getElementById('locationIndicator');
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.8s ease-out';
-                observer.observe(el);
-            });
-
-            // Add ripple effect to interactive elements
-            document.querySelectorAll('a, button').forEach(element => {
-                element.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
-                    
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-        });
-    </script>
-
-    <style>
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(74, 222, 128, 0.3);
-            transform: scale(0);
-            animation: ripple-animation 0.6s linear;
-            pointer-events: none;
-        }
-
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
+        // Search function
+        function performSearch() {
+            const query = searchInput.value.trim();
+            if (query) {
+                console.log('Searching for:', query);
+                // Simulate search results update
+                updateSearchResults(query);
             }
         }
-    </style>
-</body>
-</html>
+
+        // Update search results
+        function updateSearchResults(query) {
+            const resultsContainer = document.getElementById('searchResults');
+            // Add loading state
+            resultsContainer.innerHTML = `
+                <div class="text-center py-8">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+                    <p class="text-green-600 font-semibold">Mencari "${query}"...</p>
+                </div>
+            `;
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                resultsContainer.innerHTML = `
+                    <div class="bg-green-100 border border-green-300 rounded-xl p-6 text-center">
+                        <i class="fas fa-search text-green-600 text-3xl mb-4"></i>
+                        <p class="text-green-800 font-semibold text-lg">Pencarian untuk "${query}" selesai</p>
+                        <p class="text-green-600 mt-2">Menampilkan hasil yang relevan di peta</p>
+                    </div>
+                `;
+            }, 1500);
+        }
+
+        // Get current location
+        function getCurrentLocation() {
+            locationBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i><span class="hidden sm:inline">Mencari...</span>';
+            locationBtn.disabled = true;
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // Show location indicator
+                        locationIndicator.classList.remove('hidden');
+                        
+                        // Update map to show current location
+                        const mapFrame = document.getElementById('googleMap');
+                        const currentLocationUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sTaman%20Pemakaman%20Umum%20Tanah%20Kusir!5e0!3m2!1sen!2sid!4v1635123456789!5m2!1sen!2sid`;
+                        mapFrame.src = currentLocationUrl;
+                        
+                        // Reset button
+                        locationBtn.innerHTML = '<i class="fas fa-check mr-2"></i><span class="hidden sm:inline">Berhasil</span>';
+                        
+                        setTimeout(() => {
+                            locationBtn.innerHTML = '<i class="fas fa-location-arrow mr-2"></i><span class="hidden sm:inline">Lokasi</span>';
+                            locationBtn.disabled = false;
+                        }, 2000);
+                    },
+                    function(error) {
+                        locationBtn.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i><span class="hidden sm:inline">Gagal</span>';
+                        
+                        setTimeout(() => {
+                            locationBtn.innerHTML = '<i class="fas fa-location-arrow mr-2"></i><span class="hidden sm:inline">Lokasi</span>';
+                            locationBtn.disabled = false;
+                        }, 2000);
+                        
+                        console.error('Error getting location:', error);
+                    }
+                );
+            } else {
+                alert('Geolocation tidak didukung oleh browser ini.');
+                locationBtn.innerHTML = '<i class="fas fa-location-arrow mr-2"></i><span class="hidden sm:inline">Lokasi</span>';
+                locationBtn.disabled = false;
+            }
+        }
+
+        // Show location on map
+        function showOnMap(lat, lng) {
+            const mapFrame = document.getElementById('googleMap');
+            const newUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2
