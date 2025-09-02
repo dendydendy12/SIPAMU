@@ -454,107 +454,93 @@
         </div>
     </section>
 
-    <!-- Search Section -->
-    <section class="relative bg-gradient-to-br from-green-50 via-white to-green-100 py-20 overflow-hidden">
-        <!-- Background Effect -->
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute -top-24 -left-24 w-72 h-72 bg-green-200/40 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-green-300/30 rounded-full blur-3xl"></div>
-        </div>
-
-        <div class="max-w-6xl mx-auto px-6 relative">
-            <!-- Heading -->
-            <div class="text-center mb-14">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-5 text-gray-900 tracking-tight">
-                    Cari Lokasi Makam dengan Mudah
-                </h1>
-                <p class="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-                    Temukan lokasi makam secara cepat, akurat, dan praktis dengan teknologi pemetaan digital terkini.
+    <!-- Search Section - Modern Design -->
+    <section class="py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold text-sm uppercase tracking-wide">Pencarian Makam</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">Temukan Lokasi Makam</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Cari dan temukan lokasi makam dengan mudah menggunakan teknologi pemetaan digital terkini
                 </p>
             </div>
 
-            <!-- Search Box -->
+            <!-- Search Container -->
             <div class="max-w-4xl mx-auto">
-                <div
-                    class="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-green-200 shadow-2xl transition-all duration-300 hover:shadow-green-200/60">
-
-                    <!-- Search Bar -->
+                <div class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-200">
+                    <!-- Main Search Bar -->
                     <div class="relative mb-8">
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                                <i class="fas fa-search text-green-600 text-xl"></i>
-                            </div>
-                            <input type="text" id="searchInput"
-                                placeholder="Cari nama almarhum, nomor makam, atau lokasi..."
-                                class="w-full pl-14 pr-36 py-5 text-gray-900 placeholder-gray-400 bg-white/70 rounded-xl border-2 border-green-300 focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300 shadow-md">
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 space-x-2">
-                                <!-- Current Location Button -->
-                                <button id="locationBtn"
-                                    class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-300 focus:outline-none">
-                                    <i class="fas fa-location-arrow"></i>
-                                    <span class="hidden sm:inline">Lokasi</span>
-                                </button>
-                                <!-- Search Button -->
-                                <button id="searchBtn"
-                                    class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-green-400 focus:outline-none">
-                                    <i class="fas fa-search"></i>
-                                    Cari
-                                </button>
-                            </div>
+                        <input type="text" placeholder="Cari nama almarhum, nomor makam, atau lokasi..."
+                            class="w-full pl-16 pr-32 py-6 text-lg bg-gray-50 border-2 border-gray-200 rounded-2xl focus:border-green-500 focus:ring-4 focus:ring-green-100 outline-none transition-all duration-300">
+
+                        <div class="absolute inset-y-0 left-0 pl-6 flex items-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-4 space-x-3">
+                            <button
+                                class="bg-green-100 hover:bg-green-200 text-green-700 px-4 py-3 rounded-xl transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300">
+                                Cari
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Search Filters -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                    <!-- Filter Options -->
+                    <div class="grid md:grid-cols-3 gap-4 mb-8">
                         <select
-                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-                            <option value="">Pilih Area Pemakaman</option>
-                            <option value="area-a">Area A - Umum</option>
-                            <option value="area-b">Area B - Khusus</option>
-                            <option value="area-c">Area C - VIP</option>
-                            <option value="area-d">Area D - Keluarga</option>
+                            class="px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-100 outline-none">
+                            <option>Pilih Area Pemakaman</option>
+                            <option>Area A - Umum</option>
+                            <option>Area B - Khusus</option>
+                            <option>Area C - VIP</option>
+                            <option>Area D - Keluarga</option>
                         </select>
-
                         <select
-                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-                            <option value="">Tahun Pemakaman</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="older">Lebih Lama</option>
+                            class="px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-100 outline-none">
+                            <option>Tahun Pemakaman</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>Lebih Lama</option>
                         </select>
-
                         <select
-                            class="px-4 py-3 bg-white/70 text-gray-800 border-2 border-green-300 rounded-lg focus:border-green-500 focus:ring-4 focus:ring-green-200 outline-none transition-all duration-300">
-                            <option value="">Jenis Makam</option>
-                            <option value="tanah">Tanah</option>
-                            <option value="semen">Semen</option>
-                            <option value="marmer">Marmer</option>
-                            <option value="granit">Granit</option>
+                            class="px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-100 outline-none">
+                            <option>Jenis Makam</option>
+                            <option>Tanah</option>
+                            <option>Semen</option>
+                            <option>Marmer</option>
+                            <option>Granit</option>
                         </select>
                     </div>
 
-                    <!-- Quick Search Suggestions -->
+                    <!-- Popular Searches -->
                     <div class="flex flex-wrap items-center gap-3">
-                        <span class="text-green-700 font-semibold">Pencarian Populer:</span>
+                        <span class="text-gray-700 font-semibold">Populer:</span>
                         <button
-                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-                            Blok A1-A50
-                        </button>
+                            class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm transition-all duration-300">Blok
+                            A1-A50</button>
                         <button
-                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-                            Area VIP
-                        </button>
+                            class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm transition-all duration-300">Area
+                            VIP</button>
                         <button
-                            class="bg-green-500/90 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md">
-                            Makam Keluarga
-                        </button>
+                            class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm transition-all duration-300">Makam
+                            Keluarga</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <!-- Floating Action Button -->
@@ -578,104 +564,95 @@
     </button>
 
 
-    <!-- Gallery Section -->
+
+    <!-- Gallery Section - Masonry Style -->
     <section id="galeri" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <!-- Header -->
             <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-6 gradient-text animate-fade-in">Galeri SiKamu</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
-                    Dokumentasi visual dari fasilitas pemakaman dan implementasi sistem SiKamu
+                <span class="text-green-600 font-semibold text-sm uppercase tracking-wide">Galeri Kami</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">Dokumentasi Visual SiKamu</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Lihat fasilitas pemakaman dan implementasi sistem SiKamu dalam aksi
                 </p>
             </div>
 
-
             <!-- Gallery Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 
                 <!-- Gallery Item 1 -->
-                <div
-                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl col-span-2 row-span-2">
                     <img src="asset/img/makam.png" alt="Area Pemakaman"
-                        class="w-full h-full object-cover aspect-square">
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="p-4 text-white">
-                            <h3 class="font-bold text-lg">Area Pemakaman Utama</h3>
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 text-white">
+                            <h3 class="text-xl font-bold mb-2">Area Pemakaman Utama</h3>
                             <p class="text-sm text-gray-200">Fasilitas pemakaman terkelola rapi & teratur</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gallery Item 2 -->
-                <div
-                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
                     <img src="asset/img/ambulance.jpeg" alt="Mobil Jenazah"
-                        class="w-full h-full object-cover aspect-square">
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-4 text-white">
-                            <h3 class="font-bold text-lg">Layanan Ambulance Jenazah</h3>
-                            <p class="text-sm text-gray-200">Transportasi jenazah dengan fasilitas aman & nyaman</p>
+                            <h3 class="font-bold">Ambulance Jenazah</h3>
+                            <p class="text-xs text-gray-200">Transportasi aman & nyaman</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gallery Item 3 -->
-                <div
-                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <img src="asset/img/org.jpeg" alt="Petugas Pemakaman"
-                        class="w-full h-full object-cover aspect-square">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
+                    <img src="asset/img/org.jpeg" alt="Petugas"
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-4 text-white">
-                            <h3 class="font-bold text-lg">Petugas Pemakaman</h3>
-                            <p class="text-sm text-gray-200">Tim profesional dalam pelayanan pemakaman</p>
+                            <h3 class="font-bold">Tim Profesional</h3>
+                            <p class="text-xs text-gray-200">Petugas berpengalaman</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gallery Item 4 -->
-                <div
-                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <img src="asset/img/loket.jpg" alt="Pelayanan Kantor"
-                        class="w-full h-full object-cover aspect-square">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
+                    <img src="asset/img/loket.jpg" alt="Pelayanan"
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-4 text-white">
-                            <h3 class="font-bold text-lg">Kantor Pelayanan</h3>
-                            <p class="text-sm text-gray-200">Loket pelayanan langsung untuk masyarakat</p>
+                            <h3 class="font-bold">Kantor Pelayanan</h3>
+                            <p class="text-xs text-gray-200">Loket pelayanan masyarakat</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gallery Item 5 -->
-                <div
-                    class="gallery-item relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <img src="asset/img/ziarah.jpg" alt="Sistem Digital"
-                        class="w-full h-full object-cover aspect-square">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl">
+                    <img src="asset/img/ziarah.jpg" alt="Ziarah"
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-4 text-white">
-                            <h3 class="font-bold text-lg">Kegiatan Ziarah</h3>
-                            <p class="text-sm text-gray-200">aktivitas peziarah atau doa bersama.</p>
+                            <h3 class="font-bold">Kegiatan Ziarah</h3>
+                            <p class="text-xs text-gray-200">Aktivitas doa bersama</p>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
 
             <!-- View More Button -->
             <div class="text-center mt-12">
                 <button
-                    class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 animate-glow">
+                    class="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Lihat Semua Galeri
                 </button>
             </div>
         </div>
-
     </section>
 
     <!-- Modal for Gallery -->
