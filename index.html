@@ -68,16 +68,14 @@
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10  rounded-lg flex items-center justify-center">
-                        <img src="asset/img/logo.png" class="w- h-10 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                        </img>
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+                        <img src="asset/img/logo.png" class="w-10 h-10" alt="Logo">
                     </div>
                     <span class="text-2xl font-bold gradient-text">SiKamu</span>
                 </div>
 
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex space-x-8">
+                <!-- Menu Desktop + Login -->
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="#beranda"
                         class="text-gray-700 hover:text-green-500 transition-colors duration-300">Beranda</a>
                     <a href="#layanan"
@@ -88,6 +86,12 @@
                         class="text-gray-700 hover:text-green-500 transition-colors duration-300">Galeri</a>
                     <a href="#kontak"
                         class="text-gray-700 hover:text-green-500 transition-colors duration-300">Kontak</a>
+
+                    <!-- Tombol Login -->
+                    <a href="#"
+                        class="ml-6 px-5 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium shadow-md hover:from-emerald-600 hover:to-green-500 transition-all duration-300">
+                        Login
+                    </a>
                 </div>
 
                 <!-- Hamburger Menu (Mobile) -->
@@ -100,6 +104,8 @@
             </div>
         </div>
     </nav>
+
+
 
     <!-- Hero Section -->
     <section id="beranda" class="pt-20 pb-16 hero-pattern bg-white">
@@ -255,7 +261,8 @@
                     <h2 class="text-4xl lg:text-5xl font-bold mb-8 gradient-text">Tentang SiKamu</h2>
                     <div class="space-y-6 text-lg text-gray-300 text-justify">
                         <p>
-                            SiKamu (Sistem Informasi Pemakaman Umum) adalah solusi digital inovatif yang dirancang khusus
+                            SiKamu (Sistem Informasi Pemakaman Umum) adalah solusi digital inovatif yang dirancang
+                            khusus
                             untuk modernisasi pengelolaan pemakaman. Sistem ini mengintegrasikan teknologi terdepan
                             dengan kebutuhan masyarakat akan layanan pemakaman yang efisien dan transparan.
                         </p>
@@ -276,9 +283,9 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl blur-3xl opacity-30 animate-pulse">
                     </div>
-<div class="relative glass-effect p-8 rounded-3xl flex justify-center items-center">
-    <img src="asset/icons/daftar-ulang.png" alt="daftar-ulang" class="w-full max-w-md">
-</div>
+                    <div class="relative glass-effect p-8 rounded-3xl flex justify-center items-center">
+                        <img src="asset/img/char.png" alt="char" class="w-full max-w-md">
+                    </div>
 
                 </div>
             </div>
@@ -300,97 +307,115 @@
                 </p>
             </div>
 
-<!-- Container utama dengan max width dan center -->
-<div class="max-w-6xl mx-auto px-4">
-    
-    <!-- Grid untuk 3 kartu pertama -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-8">
-        
-        <!-- Card 1 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
-            <div>
-                <div class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <img src="asset/icons/makam.png" alt="icon makam" class="w-14 h-14">
-                </div>
-                <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Pemakaman Baru / Tumpang</h3>
-                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                    Layanan permohonan untuk pemakaman baru atau pemakaman tumpang sesuai prosedur yang berlaku.
-                </p>
-            </div>
-            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
-                Ajukan
-            </button>
-        </div>
+            <!-- Container utama dengan max width dan center -->
+            <div class="max-w-6xl mx-auto px-4">
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
-            <div>
-                <div class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <img src="asset/icons/daftar-ulang.png" alt="icon daftar ulang" class="w-14 h-14">
-                </div>
-                <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Daftar Ulang Tanah Makam</h3>
-                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                    Layanan untuk memperpanjang atau melakukan daftar ulang tanah makam yang sudah ada.
-                </p>
-            </div>
-            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
-                Ajukan
-            </button>
-        </div>
+                <!-- Grid untuk 3 kartu pertama -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-8">
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
-            <div>
-                <div class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <img src="asset/icons/pindah.png" alt="icon pindah makam" class="w-14 h-14">
-                </div>
-                <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Pindah Makam</h3>
-                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                    Layanan permohonan untuk memindahkan jenazah ke lokasi makam lain sesuai ketentuan.
-                </p>
-            </div>
-            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
-                Ajukan
-            </button>
-        </div>
-    </div>
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                                <img src="asset/icons/makam.png" alt="icon makam" class="w-14 h-14">
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Pemakaman Baru / Tumpang</h3>
+                            <p class="text-gray-600 text-center text-sm leading-relaxed">
+                                Layanan permohonan untuk pemakaman baru atau pemakaman tumpang sesuai prosedur yang
+                                berlaku.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
+                            Ajukan
+                        </button>
+                    </div>
 
-    <!-- Grid untuk 2 kartu terakhir - centered -->
-    <div class="flex flex-wrap justify-center gap-8">
-        
-        <!-- Card 4 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
-            <div>
-                <div class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <img src="asset/icons/ambulance.png" alt="icon mobil jenazah" class="w-14 h-14">
-                </div>
-                <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Mobil Jenazah</h3>
-                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                    Penyediaan layanan sewa mobil jenazah untuk kebutuhan masyarakat.
-                </p>
-            </div>
-            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
-                Ajukan
-            </button>
-        </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                                <img src="asset/icons/daftar-ulang.png" alt="icon daftar ulang" class="w-14 h-14">
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Daftar Ulang Tanah Makam</h3>
+                            <p class="text-gray-600 text-center text-sm leading-relaxed">
+                                Layanan untuk memperpanjang atau melakukan daftar ulang tanah makam yang sudah ada.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
+                            Ajukan
+                        </button>
+                    </div>
 
-        <!-- Card 5 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
-            <div>
-                <div class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <img src="asset/icons/informasi.png" alt="icon informasi TPU" class="w-14 h-14">
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                                <img src="asset/icons/pindah.png" alt="icon pindah makam" class="w-14 h-14">
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Pindah Makam</h3>
+                            <p class="text-gray-600 text-center text-sm leading-relaxed">
+                                Layanan permohonan untuk memindahkan jenazah ke lokasi makam lain sesuai ketentuan.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
+                            Ajukan
+                        </button>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Informasi TPU dan Pencarian Makam</h3>
-                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                    Layanan informasi lokasi TPU serta fasilitas pencarian makam secara online maupun offline.
-                </p>
+
+                <!-- Grid untuk 2 kartu terakhir - centered -->
+                <div class="flex flex-wrap justify-center gap-8">
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                                <img src="asset/icons/ambulance.png" alt="icon mobil jenazah" class="w-14 h-14">
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Mobil Jenazah</h3>
+                            <p class="text-gray-600 text-center text-sm leading-relaxed">
+                                Penyediaan layanan sewa mobil jenazah untuk kebutuhan masyarakat.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
+                            Ajukan
+                        </button>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                                <img src="asset/icons/informasi.png" alt="icon informasi TPU" class="w-14 h-14">
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 mb-3 text-center">Informasi TPU dan Pencarian
+                                Makam</h3>
+                            <p class="text-gray-600 text-center text-sm leading-relaxed">
+                                Layanan informasi lokasi TPU serta fasilitas pencarian makam secara online maupun
+                                offline.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
+                            Lihat Info
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-all duration-300 self-center font-medium shadow-md hover:shadow-lg">
-                Lihat Info
-            </button>
-        </div>
-    </div>
-</div>
 
 
     </section>
@@ -930,20 +955,50 @@
                                             }, 3000);
                                         }
                                     });
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const nav = document.querySelector('nav'); // ambil nav sebagai parent
+const mobileMenu = document.createElement('div');
+let isMenuOpen = false;
 
-                                    // Mobile menu toggle
-                                    const mobileMenuButton = document.querySelector('.md\\:hidden');
-                                    const mobileMenu = document.createElement('div');
-                                    mobileMenu.className =
-                                        'absolute top-full left-0 w-full md:hidden bg-white border-t border-green-200 shadow-lg transition-all duration-300 ease-out z-50';
-                                    mobileMenu.innerHTML = `
-    <div class="px-6 py-4 space-y-4">
-        <a href="#beranda" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Beranda</a>
-        <a href="#layanan" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Layanan</a>
-        <a href="#tentang" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Tentang</a>
-        <a href="#kontak" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Kontak</a>
-    </div>
+mobileMenu.className =
+  'absolute top-full left-0 w-full md:hidden bg-white border-t border-green-200 shadow-lg transition-all duration-300 ease-out z-50';
+mobileMenu.innerHTML = `
+  <div class="px-6 py-4 space-y-4">
+      <a href="#beranda" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Beranda</a>
+      <a href="#layanan" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Layanan</a>
+      <a href="#tentang" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Tentang</a>
+      <a href="#galeri" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Galeri</a>
+      <a href="#kontak" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Kontak</a>
+      
+      <!-- Tombol Login -->
+      <a href="login.html"
+         class="block text-center px-5 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium shadow-md hover:from-emerald-600 hover:to-green-500 transition-all duration-300">
+         Login
+      </a>
+  </div>
 `;
+
+// Toggle open/close saat klik hamburger
+mobileMenuButton.addEventListener('click', () => {
+  if (isMenuOpen) {
+    mobileMenu.remove();
+    isMenuOpen = false;
+  } else {
+    nav.appendChild(mobileMenu); // tempel menu ke dalam nav
+    isMenuOpen = true;
+  }
+});
+
+// Hapus menu otomatis kalau balik ke desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768 && isMenuOpen) {
+    mobileMenu.remove();
+    isMenuOpen = false;
+  }
+});
+
+
                                     mobileMenu.style.display = 'none';
                                     mobileMenu.style.opacity = '0';
                                     mobileMenu.style.transform = 'translateY(-10px)';
